@@ -1,0 +1,107 @@
+html {
+  font-size : 10px;
+  font-family: sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+}
+
+h1 {
+  font-family: 'Billabong';
+  text-align: center;
+  font-size: 10rem;
+  font-weight: 100;
+  margin: 2rem 0;
+  color: black;
+}
+
+@font-face {
+  font-family: 'Billabong';
+  src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot?#iefix") format('embedded-opentype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.woff") format('woff'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.ttf") format('truetype'), url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.svg#billabongregular") format('svg');
+}
+
+.post-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.figure {
+  border: 1px solid #d3d3d3;
+  flex-basis: calc(33.333% - 4rem);
+  padding: 2rem;
+  flex-grow: 1;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.photo {
+  width: calc(100% + 4rem);
+  margin: -2rem 0rem 0rem -2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  flex-basis: 48%;
+  color: red;
+  font-size: 15px;
+  border: 2px solid #f2f2f2;
+  line-height: 2;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  border-color: #065784;
+}
+
+.addIcon{
+  margin: 20px auto;
+  display: table;
+  padding: 40px;
+  background: url("https://image.flaticon.com/icons/svg/60/60740.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.form{
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input{
+  font-family: sans-serif;
+  background: #F2F2F2;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin: 0 0 15px;
+}
+
+.form button{
+  font-family: sans-serif;
+  text-transform: uppercase;
+  background: #065784;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form button:hover{
+  background-color: #7B8589;
+}
