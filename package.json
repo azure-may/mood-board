@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://azure-may.github.io/mood-board",
   "dependencies": {
-    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
@@ -12,6 +11,9 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
     "redux": "^4.0.4"
+  },
+  "dev-dependencies": {
+    "gh-pages": "^2.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
