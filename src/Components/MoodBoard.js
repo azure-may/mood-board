@@ -9,7 +9,7 @@ const Photowall = props => {
       <Link className='addIcon' to='/add-photo'></Link>
       <div className='post-grid'>
         {props.posts
-          .map((post, index) => <Post key={index} post={post} removePost={props.removePost}/>)}
+          .map((post, index) => <Post key={index} post={post} {...props} index={index}/>)}
       </div>
     </div>
   )
@@ -17,7 +17,6 @@ const Photowall = props => {
 
 Photowall.propTypes = {
   posts: PropTypes.array.isRequired,
-  removePost: PropTypes.func.isRequired,
 }
 
 export default Photowall
