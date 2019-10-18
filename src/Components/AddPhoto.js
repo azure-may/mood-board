@@ -24,7 +24,7 @@ class AddPhoto extends Component {
     <div>
       <div className='form'>
         <form onSubmit={this.handleSubmit}>
-          <input type='text' placeholder='Link' name='link'/>
+          <input type='url' placeholder='Link' name='link'/>
           <input type='text' placeholder='Description' name='description'/>
           <button>Post</button>
         </form>
