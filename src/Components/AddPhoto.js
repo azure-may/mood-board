@@ -23,8 +23,8 @@ class AddPhoto extends Component {
     return (
     <div>
       <div className='form'>
-        <form onSubmit={this.handleSubmit}>
-          <input type='url' placeholder='Link' name='link'/>
+        <form onSubmit={this.handleSubmit} method='POST'>
+          <input type='url' placeholder='Link' name='link' required pattern="https://.+"/>
           <input type='text' placeholder='Description' name='description'/>
           <button>Post</button>
         </form>

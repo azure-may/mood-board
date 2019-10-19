@@ -10,7 +10,8 @@ function mapDispatchToProps(dispatch){
 
 function mapStateToProps(state){
   return {
-    posts: state
+    posts: state.post,
+    comments: state.comment
   }
 }
 

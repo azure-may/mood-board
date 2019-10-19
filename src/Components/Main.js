@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import MoodBoard from './MoodBoard'
 import AddPhoto from './AddPhoto'
+import Show from './Show'
 import {Route, Link} from 'react-router-dom'
 
 class Main extends Component {
@@ -17,6 +18,7 @@ class Main extends Component {
                 </div>
               )}/>
               <Route exact path='/add-photo' render={() => (<AddPhoto {...this.props}/>)}/>
+              <Route exact path='/show/:id' render={(params) => (<Show {...this.props} {...params}/>)}/>
             </div>
   }
 }
