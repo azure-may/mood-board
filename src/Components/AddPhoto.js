@@ -11,14 +11,14 @@ class AddPhoto extends Component {
     event.preventDefault()
     const imageLink = event.target.elements.link.value
     const description = event.target.elements.description.value
-    const post = {
+    const addPost = {
       id: Number(new Date()),
       description,
       imageLink
     }
-    if(imageLink && description){
-      this.props.startAddingPost(post)
-      this.props.history.push('/')
+    if(description && imageLink){
+      this.props.startAddingPost(addPost)
+      this.props.onHistory.push('/')
     }
   }
 
@@ -27,7 +27,7 @@ class AddPhoto extends Component {
     <div>
       <div className='form'>
         <form onSubmit={this.handleSubmit}>
-          <input type='url' placeholder='Link' name='link' required pattern="https://.+"/>
+          <input type='text' placeholder='Link' name='link'/>
           <input type='text' placeholder='Description' name='description'/>
           <button> Post </button>
         </form>

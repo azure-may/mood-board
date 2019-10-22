@@ -1,17 +1,27 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Post from './Post'
 import Comments from './Comments'
 
-const Show = props => {
-  const {match, posts} = props
-  const id = Number(match.params.id)
-  const post = posts[id]
-  const comments = props.comments[id] || []
-    return (
-      <div className='single-photo'>
-        <Post post={post} index={id} {...props}/>
-        <Comments startAddingComment={props.startAddingComment} comments={comments} id={id}/>
-      </div>
-)}
+class Show extends Component {
+  render() {
+    const {match, posts} = this.props
+    const id = Number(match.params.id)
+    const post = posts.find((post) => post.id === id)
+    const comments = this.props.comments[match.params.id] || []
+    const index = this.props.posts.findIndex((post) => post.id === id)
+    if (this.props.loading === true) {
+      return <div className='loader'> ...loading </div>
+    } else if (post) {
+
+      return <div className='single-photo'>
+          <Post post={post} {...this.props}index={index}/>
+          <Comments startAddingComment={this.props.startAddingComment} comments={comments} id={id}/>
+        </div>
+
+      } else {
+        return <h1> ...no post found </h1>
+      }
+    }
+  }
 
 export default Show

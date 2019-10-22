@@ -2,28 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 
-const Post = props => {
+function Post(props) {
+  
   const post = props.post
-  const id = props.post.id
-  const index = props.index
-  console.log(post, id, index)
-  const numComments = props.comments[id] ? props.comments[id].length : 0
-    return (
+
+  return (
       <figure className='figure'>
-        <Link to={`/show/${props.index}`} id={id} index={index} post={post}><img className='photo' src={post.imageLink} alt={post.description}/></Link>
-        <figcaption><p>{post.description}</p></figcaption>
+
+        <Link to={`/show/${post.id}`}>
+          <img className='photo' src={post.imageLink} alt={post.description}/>
+        </Link>
+
+        <figcaption> <p> {post.description} </p> </figcaption>
+
         <div className='button-container'>
           <button onClick={() => {
-            props.removePost(props.index)
+            props.startRemovingPost(props.index, post.id)
             props.history.push('/')
-          }}>Remove</button>
-        <Link className='button' to={`/show/${props.index}`}>
+          }}> Remove </button>
+
+        <Link className='button' to={`/show/${post.id}`}>
           <div className='comment-count'>
             <div className='speech-bubble'></div>
-            {numComments}
+            {props.comments[post.id] ? props.comments[post.id].length : 0}
           </div>
         </Link>
+
         </div>
+
       </figure>
 )}
 
