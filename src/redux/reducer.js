@@ -1,4 +1,4 @@
-import posts from '../data/posts'
+// import posts from '../data/posts'
 import {combineReducers} from 'redux'
 
 const comment = (state={}, action) => {
@@ -14,8 +14,9 @@ const comment = (state={}, action) => {
   }
 }
 
-const post = (state=posts, action) => {
+const post = (state=[], action) => {
   switch(action.type){
+    case 'LOAD_POSTS': return action.posts
     case 'REMOVE_POST': return [...state.slice(0, action.index), ...state.slice(action.index + 1)]
     case 'ADD_POST': return [action.post, ...state]
     default: return state

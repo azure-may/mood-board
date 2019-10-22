@@ -3,20 +3,22 @@ import Post from './Post'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 
-const Photowall = props => {
+const MoodBoard = props => {
   return (
     <div>
       <Link className='addIcon' to='/add-photo' ></Link>
       <div className='post-grid'>
-        {props.posts
-          .map((post, index) => <Post key={index} post={post} {...props} index={index}/>)}
+        {
+          props.posts
+          .map((post, index) => <Post key={index} post={post} index={index} id={post.id} {...props} />)
+        }
       </div>
     </div>
   )
 }
 
-Photowall.propTypes = {
+MoodBoard.propTypes = {
   posts: PropTypes.array.isRequired,
 }
 
-export default Photowall
+export default MoodBoard

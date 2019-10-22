@@ -10,7 +10,7 @@ const Show = props => {
     return (
       <div className='single-photo'>
         <Post post={post} index={id} {...props}/>
-        <Comments addComment={props.addComment} comments={comments} id={id}/>
+        <Comments startAddingComment={props.startAddingComment} comments={comments} id={id}/>
       </div>
 )}
 

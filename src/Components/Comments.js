@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 class Comments extends Component {
+  
   constructor(){
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -9,9 +10,10 @@ class Comments extends Component {
   handleSubmit(event){
     event.preventDefault()
     const comment = event.target.elements.comment.value
+    console.log(event.target.elements)
     if(comment){
       event.target.elements.comment.value = ''
-      this.props.addComment(comment, this.props.id)
+      this.props.startAddingComment(comment,)
     }
   }
 

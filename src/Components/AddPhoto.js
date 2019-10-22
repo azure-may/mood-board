@@ -9,12 +9,15 @@ class AddPhoto extends Component {
 
   handleSubmit(event){
     event.preventDefault()
+    const imageLink = event.target.elements.link.value
+    const description = event.target.elements.description.value
     const post = {
-      description: event.target.elements.description.value,
-      imageLink: event.target.elements.link.value
+      id: Number(new Date()),
+      description,
+      imageLink
     }
-    if(post.imageLink && post.description){
-      this.props.addPost(post)
+    if(imageLink && description){
+      this.props.startAddingPost(post)
       this.props.history.push('/')
     }
   }
@@ -23,10 +26,10 @@ class AddPhoto extends Component {
     return (
     <div>
       <div className='form'>
-        <form onSubmit={this.handleSubmit} method='POST'>
+        <form onSubmit={this.handleSubmit}>
           <input type='url' placeholder='Link' name='link' required pattern="https://.+"/>
           <input type='text' placeholder='Description' name='description'/>
-          <button>Post</button>
+          <button> Post </button>
         </form>
       </div>
     </div>

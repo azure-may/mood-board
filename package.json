@@ -4,13 +4,15 @@
   "private": true,
   "homepage": "https://azure-may.github.io/mood-board",
   "dependencies": {
+    "firebase": "^7.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
   "dev-dependencies": {
     "gh-pages": "^2.1.1"
