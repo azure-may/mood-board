@@ -1,14 +1,14 @@
 import * as firebase from 'firebase'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAB4d3QFRvrfw48gOwL_UKD1c3d-p3BTfw",
-  authDomain: "mood-board-b9808.firebaseapp.com",
-  databaseURL: "https://mood-board-b9808.firebaseio.com",
-  projectId: "mood-board-b9808",
-  storageBucket: "mood-board-b9808.appspot.com",
-  messagingSenderId: "866398373422",
-  appId: "1:866398373422:web:ebb27b58bfa394c21e01bf",
-  measurementId: "G-0P5W0LZJ06"
+  apiKey: "AIzaSyC5eJYwS9xSwOGQfRxeY90bCmqztjgEsu8",
+  authDomain: "mood-board-97e63.firebaseapp.com",
+  databaseURL: "https://mood-board-97e63.firebaseio.com",
+  projectId: "mood-board-97e63",
+  storageBucket: "mood-board-97e63.appspot.com",
+  messagingSenderId: "128283375811",
+  appId: "1:128283375811:web:3d5723ffdae69168b0ca76",
+  measurementId: "G-D7Z575T66P"
 }
 
 firebase.initializeApp(firebaseConfig)
