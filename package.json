@@ -14,7 +14,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },
-  "dev-dependencies": {
+  "devDependencies": {
     "gh-pages": "^2.1.1"
   },
   "scripts": {
