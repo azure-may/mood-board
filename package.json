@@ -13,7 +13,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^5.0.0"
   },
   "scripts": {
     "predeploy": "yarn run build",
